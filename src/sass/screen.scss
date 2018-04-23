@@ -1,62 +1,96 @@
-/* Your styles (and Sass) start here */
-
-/*** Example styles ***/
-body {
-  background: #36a1d9;
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
 }
 
-h1 {
-  // Transition: Used for hover effect
-  transition: all 3s ease-out;
-
-  // Animation: Used with the keyframes below
-  animation: pulsate 8s ease-out infinite;
-
-  // Normal stylin'
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  margin: 0;
-
-  font-family: Helvetica, Arial, Sand-serif;
-  font-weight: bold;
-  font-size: 6em;
-  color: white;
-  color: rgba(255,255,255,0.8);
-
-  text-align: center;
-  text-transform: uppercase;
-
+.container-fluid {
+	margin: 0;
+	padding: 0;
 }
 
-h1:hover {
-  color: #5cefaf;
+.guitarWorks {
+	background-image: url(guitarWorks.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	display: block;
+	height: 50vh;
+	width: 100vw;
 }
 
-/*** Keyframes - used with the "animation" property in the h1 ***/
-
-@keyframes pulsate {
-  0%, 20% {
-    transform: translate(-50%, -50%) scale(1);
-    filter: blur(5px);
-  }
-  50%, 70% {
-    transform: translate(-50%, -50%) scale(1.5);
-    filter: none;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    filter: blur(5px);
-  }
+.artistProfile {
+	background-image: url(artistProfile.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	display: block;
+	height: 50vh;
+	width: 100vw;
 }
 
-/*** Media queries for adjusting to different screen sizes ***/
-
-@media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 2em;
-  }
+.overlay {
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0);
+	transition: background-color 1s;
 }
 
+.overlay:hover {
+	background-color: rgba(255, 255, 255, .65);
+	transition: background-color 1s;
+}
+
+.overlay a {
+	color: #FFFCF9;
+	transition: color 1s;
+	text-shadow: 0 0 10px rgba(0, 0, 0, .75);
+}
+
+.overlay a:hover {
+	color: #0A0908;
+	transition: color 1s;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0);
+}
+
+a {
+	display: block;
+	text-align: center;
+	height: 100%;
+}
+
+h2 {
+	line-height: 50vh;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+	.guitarWorks {
+		background-image: url(/images/guitarWorks.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: right center;
+		display: block;
+		float: left;
+		height: 100vh;
+		width: 50vw;
+	}
+
+	.artistProfile {
+		background-image: url(/images/artistProfile.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: left center;
+		display: block;
+		float: left;
+		height: 100vh;
+		width: 50vw;
+	}
+
+	h2 {	
+		line-height: 100vh;
+	}
+}
